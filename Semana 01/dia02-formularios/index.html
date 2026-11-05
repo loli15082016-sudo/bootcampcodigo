@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+>
+</head>
+<body>
+    <main class="container">
+<h1> Formularios + inputs</h1>
+
+<form>
+    <h2> Inputs</h2>
+
+    <label for="input1"> Input tipo texto</label>
+<input id="input1" placeholder="Ingresa algun texto"/>
+
+<label>
+    Input(solo lectura)
+    <input readonly value="Copia este codigo" placeholder="input de solo lectura"/>
+</label>
+
+<label>
+    Input(desactivado)
+    <input disabled placeholder=" Input desactivado" type="text"/>
+</label>
+
+<label>
+    Input(number)
+    <input  placeholder=" Edad Ej.18" type="number" min="18" max="90"/>
+</label>
+
+<label>
+    Input(email)
+    <input placeholder=" Correo Ej. corre@mail.com" type="email"/>
+</label>
+
+<label>
+    Input(rango)
+    <input type="range" min="0" max="100" step="10"/>
+
+    <label>
+    Input(Telefono)
+    <input type="tel" placeholder="(+51)999 999 999"/>
+
+    <label>
+    Input(url)
+    <input type="url" placeholder="Ej. misitio.com"/>
+
+    <label>
+    Input(password)
+    <input placeholder=" password" type="password"/>
+
+    <label>
+    Input(color)
+    <input type="color"/>
+
+    <label>
+    Input(busqueda)
+    <input  type="search"/>
+
+    <label>
+    Input(archivo-seleccionar un archivo a la vez)
+    <input accept=".png" type="file"/>
+
+     <label>
+    Input(archivo-seleccionar multiples archivo a la vez)
+    <input type="file" accept=".png" multiple/>
+
+     <label>
+    
+    <input  type="hidden" value="datos ocultos">
+
+    <input type="button" value="hola soy un boton"/>
+
+    <input type="submit" value="guardar">
+
+    
+    <input type="submit"/>
+</form>
+
+<form>
+    <h2> Input tipo fecha</h2>
+
+    <label>
+        Input tipo fecha y Hora
+        <input type="datetime-local">
+    </label>
+
+    <label>
+        Input tipo fecha 
+        <input type="date">
+
+        <label>
+        Input tipo Hora
+        <input type="time">
+    </label>
+
+    <label>
+        Input tipo semana
+        <input type="week">
+
+        <label>
+        Input tipo mes
+        <input type="month">
+
+        <label>
+    
+        <input type="submit" value="guardar">
+</form>
+
+<form >
+    <h2> textarea</h2>
+
+    <label >
+        <textarea placeholder=" escribe una descripcion sobre ti..." rows="6" cols="4">hola a todos</textarea>
+    </label>
+</form>
+
+
+ </main>
+</body>
+</html>
