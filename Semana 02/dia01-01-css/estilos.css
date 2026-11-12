@@ -9,3 +9,22 @@ p{
     background-color: aquamarine;
     font-size: 20px;
 }
+h1{
+    background-color: brown;
+    font-size: 50px;
+}
+
+h3{
+    background-color: darkorange;
+}
+#estado{
+    background-color: aqua;
+}
+.btn{
+    background-color: palegreen;
+}
+
+.texto-resaltado{
+    color: dodgerblue;
+}
+
