@@ -1,38 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Teoria</title>
-    <style>
-        button {
-  background-color: tomato;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Teoria</title>
+  <style>
+    /* Pseudoclases */
 
-button:hover {
-  background-color: seagreen;
-  cursor: pointer;
-}
+    button {
+      background-color: tomato;
+    }
 
-input:focus {
-  outline: 3px solid gold;
-}
+    button:hover {
+      background-color: seagreen;
+      cursor: pointer;
+    }
 
-button:disabled {
-  background-color: lightgray;
-  
-}
-input:checked{
-    outline: 2px chocolate;
-}
-    </style>
+    input:focus {
+      outline: 3px solid gold;
+    }
+
+    button:disabled {
+      background-color: lightgray;
+    }
+
+    input:checked {
+      outline: 2px solid red;
+    }
+
+    /* Pseudoelementos */
+
+    .tip::before {
+      content: "💡 ";
+    }
+
+    .obligatorio::after {
+      content: " *";
+      color: red;
+    }
+
+    input::placeholder {
+      color: blue;
+    }
+
+    ::selection {
+      background-color: gold;
+      color: blue;
+    }
+
+    /* Selectores combinados */
+
+    /* Selector descendiente - NO USARLO SOLO ESTÁ COMO REFERENCIA */
+
+    article p {
+      border: 1px solid red;
+    }
+
+    /* Selectores de hijo directo > - NO USARLO SOLO ESTÁ COMO REFERENCIA */
+
+    article > strong {
+      color: red;
+    }
+
+    p > strong {
+      color: blue;
+    }
+
+    /* Selector de hermano adyacente + */
+
+    h2 + p {
+      font-weight: bold;
+      color: orange;
+    }
+
+    /* Selectores múltiples */
+
+    h1, h2, h3 {
+      background-color: coral;
+    }
+
+    /* Herencia */
+
+    /* Algunos estilos se heredan automáticamente y otros no lo hacen */
+
+    article {
+      color: red;
+      font-family: arial;
+    }
+
+    body {
+      color: rgb(39, 199, 21);
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    a, button {
+      color: inherit;
+      font-family: inherit;
+    }
+
+    /* Cascada */
+
+    /* La casacada decide qué estilo gana cuando hay conflictos. Depende del ordern, especificidad y herencia. */
+
+    header {
+      color: green;
+    }
+
+    .texto {
+      color: red;
+    }
+
+    #cabecera {
+      color: blue;
+    }
+
+    p {
+      color: red;
+    }
+
+    p {
+      color: blueviolet; /* Gana esta */
+    }
+
+    /* Unidades de medida */
+
+    /* 
+      Absolutas: px, cm, in   -> Siempre miden lo mismo.
+
+      Relativas: em, rem, %, vw, vh (+ modernas y flexibles) -> siempre dependen de otra medida
+    */
+
+    h1 {
+      font-size: 2rem; /* 32px con el tamaño por defecto */
+    }
+
+    .portada {
+      height: 100vh; /* Todo el alto de la ventana */
+      background-color: lightblue;
+    }
+
+    .caja {
+      width: 50%;
+      background-color: gold;
+    }
+
+    /* Colores */
+
+    h2 {
+      color: tomato;
+      color: #ff6347; /* RGB - RED GREEN BLUE */
+      color: rgb(255, 99, 71);
+      color: hsl(9, 100%, 64%);
+    }
+
+    /* Texto y tamaño del botón: el color de fondo lo pone el CSS de la lección */
+    button { color: white; padding: 12px 24px; border: none; }
+
+    button {
+      background-color: hsl(169, 82%, 27%);
+    }
+
+    button:hover {
+      background-color: hsl(169, 82%, 20%);
+    }
+
+    /* Transparencia */
+
+    h1 {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
 </head>
 <body>
-    <h1>Pseudoclase</h1>
-    <p>Pasa el cursor por el botón y haz clic en el campo.</p>
-<input type="text" placeholder="Escribe aquí" />
-<button>Enviar</button>
-<button disabled>No disponible</button>
-<input type="checkbox">Apagado
+  <h1>Pseudoclases</h1>
+
+  <p>Pasa el cursor por el botón y haz clic en el campo.</p>
+  <input type="text" placeholder="Escribe aquí" />
+  <button>Enviar</button>
+  <button disabled>No disponible</button>
+  <input type="checkbox"> Apagado
+
+  <h1>Pseudoelementos</h1>
+
+  <p class="tip">Guarda tus archivos con frecuencia.</p>
+  <p class="obligatorio">Correo</p>
+
+  <input type="text" placeholder="¿Hola, como estas?" />
+
+  <h1>Selectores combinados</h1>
+
+  <article>
+    <h2>Bienvenido</h2>
+    <p>Mi párrafo</p>
+    <p>Segundo párrafo con <strong>texto importante</strong>.</p>
+  </article>
+
+  <section>
+    <p>Otro párrafo fuera en un section</p>
+    <a href="#">enlace a mi pagina</a>
+  </section>
+  
+  <h1>Cascada</h1>
+
+  <header id="cabecera" class="texto">¿De qué color soy?</header>
+
+  <p>¿Rojo o azul? Gana la regla escrita al final.</p>
+
+  <!-- Unidades de medida -->
+
+  <h1>Mido 2rem</h1>
+  <p>Yo mido 1rem: el tamaño por defecto del navegador.</p>
+
+  <section class="portada">
+    <div class="caja">Mido la mitad de mi padre</div>
+  </section>
+  
+  <h1>Colores</h1>
+
+  <h2>Soy color tomate</h2>
+  <p>Borra tres de las cuatro líneas de color: el título se verá igual.</p>
+
+  <button>Pasa el cursor por aquí</button>
 </body>
 </html>
