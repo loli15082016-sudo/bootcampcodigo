@@ -1,0 +1,106 @@
+body {
+  /* TODO: Añadan la fuente 'Karla' desde google fonts */
+  font-family: "Karla", sans-serif;
+
+  background-color: hsl(148, 38%, 91%);
+
+  display: flex; /* flexbox */
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.contact-form {
+  /* border: 1px solid red; */
+
+  width: 400px;
+  background-color: white;
+  background-color: #fff;
+  background-color: #ffffff;
+  background-color: hsl(0, 0%, 100%);
+
+  padding: 32px;
+  border-radius: 16px;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 32px;
+  color: hsl(187, 24%, 22%);
+}
+
+label {
+  display: block;
+  margin-bottom: 16px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  display: flex;
+
+  margin-top: 8px;
+
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid hsl(186, 15%, 59%);
+  padding: 16px;
+
+  box-sizing: border-box;
+}
+
+.row {
+  /* border: 1px solid blue; */
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* TODO: Darle estilos al boton del formulario */
+
+input[type=submit] {
+  background-color: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.query-type {
+  border: 1px solid hsl(186, 15%, 59%);
+  padding: 16px;
+  margin-top: 8px;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: hsl(187, 24%, 22%);
+  cursor: pointer;
+}
+
+.query-type:hover,
+.query-type:has(input:checked) {
+  border-color: hsl(169, 82%, 27%);
+}
+
+.query-type:has(input:checked) {
+  background-color: hsl(148, 38%, 91%);
+}
+
+.query-type:focus-within {
+  outline: 2px solid hsl(169, 82%, 27%);
+  outline-offset: 2px;
+}
+
+.query-type input[type=radio] {
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: hsl(169, 82%, 27%);
+  cursor: pointer;
+}
