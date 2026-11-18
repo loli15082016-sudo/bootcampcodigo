@@ -62,3 +62,49 @@ h1 {
 
 p {
   line-height: 23px;
+  margin-bottom: 29px;
+}
+/* div de los precios: los pone en fila y centrados */
+.content div {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-bottom: 30px;
+}
+
+/* precio $149.99: verde, grande y con la fuente Fraunces */
+span {
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: hsl(158, 36%, 37%);
+}
+
+/* precio anterior $169.99: pequeño (la etiqueta <s> ya lo tacha) */
+s {
+  font-size: 13px;
+}
+
+/* botón Add to Cart: verde, ancho completo, texto blanco */
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 48px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* al pasar el ratón, verde oscuro */
+button:hover {
+  background-color: hsl(158, 42%, 18%);
+}
